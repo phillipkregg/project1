@@ -1,0 +1,149 @@
+
+body {
+	background: #FFF000;
+}
+
+.container h2 {
+	margin: 0;
+	padding: 0;
+}
+
+
+.container {
+	background-color: white;
+}
+
+.container .below-header {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	
+}
+
+h1.logo {
+	color:white;
+}
+
+
+.gray_div {
+	background: #666;
+	padding: 15px;
+}
+
+
+.green_div {
+	background: #4DBD33;
+	padding: 25px;
+}
+
+
+.highlight {
+	padding: 10px;
+	background: yellow;
+}
+
+.container a:link {
+	text-decoration: none;
+}
+
+.container a:hover {
+	text-decoration: underline;
+}
+
+.container a.new_contact_button {
+	float:right;
+	display: block;
+	text-align: center;
+	width: 120px;
+	color: #fff;
+	background: #f74902;
+	font-size: 100%;
+	font-weight: bold;
+	padding: 10px;
+	opacity:0.8;
+	filter:alpha(opacity=0.8); /* For IE8 and earlier */
+
+}
+
+
+.container a.new_contact_button:hover {
+	
+	background:   #E38217;
+	opacity: 1;
+	filter:alpha(opacity=1); /* For IE8 and earlier */
+	
+}
+
+
+
+.round {
+
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+
+}
+
+.small_round {
+vertical-align: middle;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+opacity: 0.7;
+filter:alpha(opacity=0.7); /* For IE8 and earlier */
+
+}
+
+
+/***** Override BP table styles *****/
+
+
+table tbody tr:nth-child(even) td,
+table tbody tr.even td {
+  background: transparent;
+}
+
+tr:nth-child(odd) td {
+	background:  #CCFFCC;
+}
+
+tr:hover:nth-child(odd) td{
+	background:  #76EE00;
+}
+
+tr:hover {
+	background:  #76EE00;
+}
+
+table thead>tr th {
+	background: #666;
+	color: white;
+}
+
+
+
+
+
+
+
+/*****  Table Buttons *****/
+
+.container a .table_button {
+	
+	padding: 8px;
+	
+}
+
+.container a:hover .table_button {
+	
+	padding: 8px;
+	background: white;
+}
+
+
+
+
+
+
+
+
+
