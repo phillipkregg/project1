@@ -1,6 +1,8 @@
 JqueryAirPractice::Application.routes.draw do
   
   
+  resources :jobs
+
   resources :contacts
 
   root :to => 'contacts#index'

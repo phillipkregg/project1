@@ -1,0 +1,24 @@
+<%= simple_form_for(@job) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :last_name %>
+    <%= f.input :first_name %>
+    <%= f.input :city %>
+    <%= f.input :job_type %>
+    <%= f.input :insurance_company %>
+    <%= f.input :age %>
+    <%= f.input :loss_date %>
+    <%= f.input :job_num %>
+    <%= f.input :job_status %>
+    <%= f.input :dispatch_status %>
+    <%= f.input :caller %>
+    <%= f.input :occupant %>
+    <%= f.input :production_manager %>
+    <%= f.input :crew_chief %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

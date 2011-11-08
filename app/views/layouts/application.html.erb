@@ -4,8 +4,10 @@
   <title>JqueryAirPractice</title>
   <%= stylesheet_link_tag :all %> 
   <%= stylesheet_link_tag 'blueprint/screen' %>
-  <%= stylesheet_link_tag 'blueprint/print' %>
+  <%= stylesheet_link_tag 'blueprint/print' %>  
   
+  <!--[if IE 6]><%= stylesheet_link_tag 'formtastic_ie6' %><![endif]-->
+  <!--[if IE 7]><%= stylesheet_link_tag 'formtastic_ie7' %><![endif]-->
   <%= javascript_include_tag :defaults %>
   
   
@@ -15,11 +17,17 @@
 	<div class="container">
 		
 		<div class="green_div"><%= image_tag('ServPro.png', alt: 'ServPro Industries') %></div>
-		<div class="gray_div"></div>
+		<div class="gray_div ">
+			<%= link_to "Jobs", jobs_path, :class => 'nav_button' %>
+			<%= link_to "Equipment Management", '#', :class => 'nav_button' %>
+			<%= link_to "Quick Reference Guides", '#', :class => 'nav_button' %>
+			<%= link_to "Contact Management", contacts_path, :class => 'nav_button' %>
+			
+		</div>
 		
-				
-		<%= yield %>
-		
+		<div class="content">				
+			<%= yield %>
+		</div>
 	</div>
 </body>
 </html>

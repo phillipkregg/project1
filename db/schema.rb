@@ -11,16 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111102210722) do
+ActiveRecord::Schema.define(:version => 20111107223150) do
 
   create_table "contact_types", :force => true do |t|
     t.string   "contact_type"
-    t.integer  "contact_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "contact_types", ["contact_id"], :name => "index_contact_types_on_contact_id"
 
   create_table "contacts", :force => true do |t|
     t.string   "first_name"
@@ -32,6 +29,25 @@ ActiveRecord::Schema.define(:version => 20111102210722) do
     t.string   "contact_type"
     t.string   "role"
     t.string   "manager"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "jobs", :force => true do |t|
+    t.string   "last_name"
+    t.string   "first_name"
+    t.string   "city"
+    t.string   "job_type"
+    t.string   "insurance_company"
+    t.string   "age"
+    t.datetime "loss_date"
+    t.string   "job_num"
+    t.string   "job_status"
+    t.string   "dispatch_status"
+    t.string   "caller"
+    t.string   "occupant"
+    t.string   "production_manager"
+    t.string   "crew_chief"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

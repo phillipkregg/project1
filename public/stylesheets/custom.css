@@ -3,6 +3,19 @@ body {
 	background: #FFF000;
 }
 
+
+.content {
+	padding-top:10px;
+	margin-top: 10px;
+}
+
+.transparency {
+	
+	opacity:0.8;
+	filter:alpha(opacity=0.8); /* For IE8 and earlier */
+}
+
+
 .container h2 {
 	margin: 0;
 	padding: 0;
@@ -26,7 +39,7 @@ h1.logo {
 
 .gray_div {
 	background: #666;
-	padding: 15px;
+	
 }
 
 
@@ -49,7 +62,7 @@ h1.logo {
 	text-decoration: underline;
 }
 
-.container a.new_contact_button {
+.container a.new_button {
 	float:right;
 	display: block;
 	text-align: center;
@@ -65,12 +78,31 @@ h1.logo {
 }
 
 
-.container a.new_contact_button:hover {
+.container a.new_button:hover {
 	
 	background:   #E38217;
 	opacity: 1;
 	filter:alpha(opacity=1); /* For IE8 and earlier */
 	
+}
+
+
+
+
+.container a.nav_button {
+	float:left;
+	display: block;
+	text-align: center;
+	width: 200px;
+	color: #fff;
+	background: #666;
+	font-size: 100%;
+	font-weight: bold;
+	margin-right:1px;
+	padding: 10px;
+	opacity:0.8;
+	filter:alpha(opacity=0.8); /* For IE8 and earlier */
+
 }
 
 
@@ -96,10 +128,15 @@ filter:alpha(opacity=0.7); /* For IE8 and earlier */
 
 /***** Override BP table styles *****/
 
+table tr {
+	font-size: 11px;
+}
+
 
 table tbody tr:nth-child(even) td,
 table tbody tr.even td {
   background: transparent;
+  
 }
 
 tr:nth-child(odd) td {
@@ -108,6 +145,7 @@ tr:nth-child(odd) td {
 
 tr:hover:nth-child(odd) td{
 	background:  #76EE00;
+	
 }
 
 tr:hover {
@@ -117,6 +155,7 @@ tr:hover {
 table thead>tr th {
 	background: #666;
 	color: white;
+	font-size:11px;
 }
 
 

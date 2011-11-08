@@ -1,0 +1,58 @@
+
+
+<div class="span-24 below-header">
+<h2 class="left">Jobs</h2>
+<%= link_to 'New Job', new_job_path, :class => 'new_button round' %>
+</div>
+<table class="tablesorter">
+	<thead>
+	  <tr>
+	    <th>Last name</th>
+	    <th>First name</th>
+	    <th>City</th>
+	    <th>Job type</th>
+	    <th>Insurance company</th>
+	    <th>Age</th>
+	    <th>Loss date</th>
+	    <th>Job num</th>
+	    <th>Job status</th>
+	    <th>Dispatch status</th>
+	    <th>Caller</th>
+	    <th>Occupant</th>
+	    <th>Production manager</th>
+	    <th>Crew chief</th>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	  </tr>
+	</thead>
+<tbody>
+<% @jobs.each do |job| %>
+  <tr>
+    <td><%= job.last_name %></td>
+    <td><%= job.first_name %></td>
+    <td><%= job.city %></td>
+    <td><%= job.job_type %></td>
+    <td><%= job.insurance_company %></td>
+    <td><%= job.age %></td>
+    <td><%= job.loss_date.to_formatted_s(:short) %></td>
+    <td><%= job.job_num %></td>
+    <td><%= job.job_status %></td>
+    <td><%= job.dispatch_status %></td>
+    <td><%= job.caller %></td>
+    <td><%= job.occupant %></td>
+    <td><%= job.production_manager %></td>
+    <td><%= job.crew_chief %></td>
+    <td><%= link_to 'Show', job %></td>
+    <td><%= link_to 'Edit', edit_job_path(job) %></td>
+    <td><%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+
+<%= paginate @jobs %>
+
+<br />
+
+

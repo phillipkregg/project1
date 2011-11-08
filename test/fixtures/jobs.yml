@@ -1,0 +1,33 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  last_name: MyString
+  first_name: MyString
+  city: MyString
+  job_type: MyString
+  insurance_company: MyString
+  age: MyString
+  loss_date: 2011-11-07 16:31:50
+  job_num: MyString
+  job_status: MyString
+  dispatch_status: MyString
+  caller: MyString
+  occupant: MyString
+  production_manager: MyString
+  crew_chief: MyString
+
+two:
+  last_name: MyString
+  first_name: MyString
+  city: MyString
+  job_type: MyString
+  insurance_company: MyString
+  age: MyString
+  loss_date: 2011-11-07 16:31:50
+  job_num: MyString
+  job_status: MyString
+  dispatch_status: MyString
+  caller: MyString
+  occupant: MyString
+  production_manager: MyString
+  crew_chief: MyString

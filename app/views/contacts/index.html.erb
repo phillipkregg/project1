@@ -1,6 +1,6 @@
 
 <div class="span-24 below-header">
-<h2 class="left">Contacts</h2><%= link_to 'New Contact', new_contact_path, :class => 'new_contact_button round' %>
+<h2 class="left">Contacts</h2><%= link_to 'New Contact', new_contact_path, :class => 'new_button round' %>
 </div>
 
 
@@ -27,7 +27,7 @@
 	<% @contacts.each do |contact| %>
 	  <tr>
 	  	<td><%= link_to image_tag('binoculars.png', :size => '16x16', :class => 'table_button small_round', :alt => 'View Details'), contact %></td>
-	  	<td><%= link_to image_tag('blue_pencil.png', :id => 'blue_pencil', :class => 'table_button small_round', :size => '16x16',  :alt => 'Edit'), edit_contact_path(contact) %></td>
+	  	<td><%= link_to image_tag('edit_pen_blue.png', :id => 'blue_pencil', :class => 'table_button small_round', :size => '16x16',  :alt => 'Edit'), edit_contact_path(contact) %></td>
 	    <td><%= contact.first_name %></td>
 	    <td><%= contact.last_name %></td>
 	    <td><%= contact.phone_num %></td>

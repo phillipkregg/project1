@@ -14,7 +14,7 @@ class ContactsController < ApplicationController
   # GET /contacts/1.xml
   def show
     @contact = Contact.find(params[:id])
-    @contact_types = ContactType.contact_order
+    #@contact_types = ContactType.contact_order
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @contact }
@@ -25,7 +25,7 @@ class ContactsController < ApplicationController
   # GET /contacts/new.xml
   def new
     @contact = Contact.new
-    @contact_types = ContactType.contact_order
+    #@contact_types = ContactType.contact_order
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @contact }
@@ -35,7 +35,7 @@ class ContactsController < ApplicationController
   # GET /contacts/1/edit
   def edit
     @contact = Contact.find(params[:id])
-    @contact_types = ContactType.contact_order
+    #@contact_types = ContactType.find(:all)
 
   end
   
@@ -43,7 +43,7 @@ class ContactsController < ApplicationController
   # POST /contacts.xml
   def create
     @contact = Contact.new(params[:contact])
-    @contact_types = ContactType.order('contact_type ASC')
+    #@contact_types = ContactType.order('contact_type ASC')
     respond_to do |format|
       if @contact.save
         format.html { redirect_to(@contact, :notice => 'Contact was successfully created.') }

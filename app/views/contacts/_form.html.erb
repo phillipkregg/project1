@@ -1,57 +1,26 @@
-<%= form_for(@contact) do |f| %>
-  <% if @contact.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
 
-      <ul>
-      <% @contact.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :phone_num %><br />
-    <%= f.text_field :phone_num %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :address1 %><br />
-    <%= f.text_field :address1 %>
-  </div>
-  <div class="field">
-    <%= f.label :address2 %><br />
-    <%= f.text_field :address2 %>
-  </div>
+<div class="contact_form_container">
+<%= simple_form_for @contact do |f| %>
   
-  <div class="field">
-    <%= f.label :contact_type %><br />
-    <%= fields_for :contact_type do |types| %>
-    	<%= types.collection_select :contact_type, @contact_types, :contact_type, :contact_type %>
-  	<% end %>  
-  </div>
   
-  <div class="field">
-    <%= f.label :role %><br />
-    <%= f.text_field :role %>
-  </div>
-  <div class="field">
-    <%= f.label :manager %><br />
-    <%= f.text_field :manager %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.label :phone_num %>
+  <%= f.text_field :phone_num %>
+  <%= f.label :address1 %>
+  <%= f.text_field :address1 %>
+  <%= f.label :address2 %>
+  <%= f.text_field :address2 %><br/>
+  <%= f.fields_for :contact_type do |contact| %>
+  	<%= contact.label :contact_type %>
+  	<%= contact.collection_select :contact_type, ContactType.order, :contact_type, :contact_type  %>
+  	<% end %>
+  <%= f.submit %>
 <% end %>
+   
+</div>
+
