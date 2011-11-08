@@ -16,14 +16,19 @@
 <body>
 	<div class="container">
 		
-		<div class="green_div"><%= image_tag('ServPro.png', alt: 'ServPro Industries') %></div>
-		<div class="gray_div ">
-			<%= link_to "Jobs", jobs_path, :class => 'nav_button' %>
-			<%= link_to "Equipment Management", '#', :class => 'nav_button' %>
-			<%= link_to "Quick Reference Guides", '#', :class => 'nav_button' %>
-			<%= link_to "Contact Management", contacts_path, :class => 'nav_button' %>
-			
+		<div class="logo_bar drybook_name">SERVPRO Drybook</div>
+		<div class="menu_div"></div>
+		<div id="nav_div">
+			<ul id="nav_list">
+				<li><%= link_to "Jobs", jobs_path, :class => 'nav_button' %></li>
+				<li><%= link_to "Equipment Management", '#', :class => 'nav_button' %></li>
+				<li><%= link_to "Quick Reference Guides", '#', :class => 'nav_button' %></li>
+				<li><%= link_to "Contact Management", contacts_path, :class => 'nav_button' %></li>
+				
+			</ul>
+			<div class="gray_div"></div>
 		</div>
+		
 		
 		<div class="content">				
 			<%= yield %>

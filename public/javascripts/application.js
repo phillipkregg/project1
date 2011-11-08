@@ -4,8 +4,11 @@
 
  $(document).ready(function(){
    
-     
-   
+    $(function(){
+	   var path = location.pathname.substring(1);
+	   if ( path )
+	     $('#nav_list li a[href$="' + path + '"]').attr('class', 'nav_select');
+ 	});
    
  });
 
