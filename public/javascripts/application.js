@@ -33,7 +33,7 @@
 	      .css('top', $(window).scrollTop() + 40)
 	      .show();
 	    $modal.fadeIn("fast");
-	    
+	    $modal.draggable({ containment: 'parent' },{ cursor: 'pointer' });
 	    $modal_container.show();
 	   
 	  });
