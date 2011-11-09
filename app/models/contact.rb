@@ -1,8 +1,6 @@
 class Contact < ActiveRecord::Base
-  has_many :contact_types
-  has_many :roles
+  belongs_to :contact_type
   
-  accepts_nested_attributes_for :contact_types
   
   paginates_per 5
   

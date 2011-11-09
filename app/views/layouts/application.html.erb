@@ -17,7 +17,15 @@
 	<div class="container">
 		
 		<div class="logo_bar drybook_name">SERVPRO Drybook</div>
-		<div class="menu_div"></div>
+		<div class="menu_div">
+			<ul>
+				<li>File</li>
+				<li>Edit</li>
+				<li>Settings</li>
+				<li>Help</li>
+				<li>About</li>
+			</ul>
+		</div>
 		<div id="nav_div">
 			<ul id="nav_list">
 				<li><%= link_to "Jobs", jobs_path, :class => 'nav_button' %></li>
@@ -32,6 +40,7 @@
 		
 		<div class="content">				
 			<%= yield %>
+						
 		</div>
 	</div>
 </body>

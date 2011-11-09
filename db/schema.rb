@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111107223150) do
+ActiveRecord::Schema.define(:version => 20111109013448) do
 
   create_table "contact_types", :force => true do |t|
     t.string   "contact_type"
@@ -26,12 +26,14 @@ ActiveRecord::Schema.define(:version => 20111107223150) do
     t.string   "email"
     t.string   "address1"
     t.string   "address2"
-    t.string   "contact_type"
     t.string   "role"
     t.string   "manager"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "contact_type_id"
   end
+
+  add_index "contacts", ["contact_type_id"], :name => "index_contacts_on_contact_type_id"
 
   create_table "jobs", :force => true do |t|
     t.string   "last_name"

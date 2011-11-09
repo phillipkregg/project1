@@ -3,23 +3,14 @@
 <%= simple_form_for @contact do |f| %>
   
   
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %>
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-  <%= f.label :phone_num %>
-  <%= f.text_field :phone_num %>
-  <%= f.label :address1 %>
-  <%= f.text_field :address1 %>
-  <%= f.label :address2 %>
-  <%= f.text_field :address2 %><br/>
-  <%= f.fields_for :contact_type do |contact| %>
-  	<%= contact.label :contact_type %>
-  	<%= contact.collection_select :contact_type, ContactType.order, :contact_type, :contact_type  %>
-  	<% end %>
-  <%= f.submit %>
+  <%= f.input :first_name %>  
+  <%= f.input :last_name %>  
+  <%= f.input :email %>  
+  <%= f.input :phone_num %>  
+  <%= f.input :address1 %>  
+  <%= f.input :address2 %><br/>
+  <%= f.association :contact_type %>  	
+  <%= f.button :submit %>
 <% end %>
    
 </div>

@@ -1,12 +1,10 @@
 JqueryAirPractice::Application.routes.draw do
   
-  
-  resources :jobs
-
-  resources :contacts
-
   root :to => 'contacts#index'
     
+  resources :jobs
+
+  resources :contacts  
   
   
   # The priority is based upon order of creation:

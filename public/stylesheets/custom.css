@@ -5,6 +5,20 @@ html {
 }
 
 
+
+
+.container ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.container h2 /* adding multiples - h1,h2,h3, etc - causes it to break */
+{
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
 .container .box {
 	background-color: #F5F5F5;
 }
@@ -26,11 +40,6 @@ body .container {
 	border-left: solid 1px  #8C8C8C;
 	border-right: solid 1px  #8C8C8C;
 	border-bottom: solid 1px  #8C8C8C;
-}
-
-.container h2 {
-	margin: 0;
-	padding: 0;
 }
 
 
@@ -216,6 +225,33 @@ body .container {
 
 	
 }
+
+
+
+
+/***********  MENU ***********/
+
+.menu_div {
+	margin:0px;
+	padding:0px;
+	float: left;
+}
+
+.menu_div ul {
+	float: left;
+}
+
+.menu_div ul li {
+	margin-left: 5px;
+	display:inline-block;
+	list-style-type:none;
+}
+
+
+
+
+
+
 
 
 .round {

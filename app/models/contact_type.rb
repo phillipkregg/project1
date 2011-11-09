@@ -1,8 +1,6 @@
 class ContactType < ActiveRecord::Base
-  belongs_to :contact
-  
-  accepts_nested_attributes_for :contact
-  
+  has_many :contacts
+    
   scope :contact_order, order('contact_type ASC')
   
   def to_s
