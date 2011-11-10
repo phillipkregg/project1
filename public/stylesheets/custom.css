@@ -375,7 +375,7 @@ table thead>tr th {
   float: left;
   width: 100px;
   text-align: right;
-  margin: 2px 10px;
+  margin: 3px 10px;
 }
 
 div.boolean, .simple_form input[type='submit'] {
@@ -442,7 +442,7 @@ label.collection_check_boxes {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(85,85,85,0.4);
+  background: rgba(0,0,0,0.4);
 }
 
 #modal {
@@ -451,20 +451,59 @@ label.collection_check_boxes {
   position: relative;
   width: 500px;  
   margin: 0 auto;
-  padding: 20px;
-  background: #fff;
-  border: 5px solid #eee;
+  padding: 0px 0px 0px 0px;  
+  border: 1px solid #000;  
+  background: rgb(69,72,77); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 29%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(69,72,77,1)), color-stop(29%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 29%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 29%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 29%); /* IE10+ */
+background: linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 29%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 
-  & > .close {
-    position: absolute;
-    float: right;
-    top: 5px;
-    color: #666;
-    &:hover, &:active {
-      color: #000;
-    }
-  }
 }
+
+
+.close {	
+	position: relative;
+	float: right;
+	top: 5px;	
+	margin-right: 5px;
+		
+}
+
+.close:hover {
+	color:#ccc;
+	
+}
+
+.close:active {
+	color:#ccc;
+}
+
+.form_container {
+	background:#fff;
+}
+
+.form_header {
+	
+	color: #fff;
+	margin: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

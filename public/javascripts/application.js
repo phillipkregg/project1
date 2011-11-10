@@ -18,6 +18,7 @@
 	  var $modal = $('#modal'),
 	      $modal_close = $modal.find('.close'),
 	      $modal_container = $('#modal-container');
+	      
 	
 	  // This bit can be confusing. Since Rails.js sends an accept header asking for
 	  // javascript, but we want it to return HTML, we need to override this instead.
@@ -32,8 +33,7 @@
 	      .prepend($modal_close)
 	      .css('top', $(window).scrollTop() + 40)
 	      .show();
-	    $modal.fadeIn("fast");
-	    $modal.draggable({ containment: 'parent' },{ cursor: 'pointer' });
+	    $modal.fadeIn("fast");	    
 	    $modal_container.show();
 	   
 	  });

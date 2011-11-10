@@ -1,5 +1,5 @@
 
-<div class="contact_form_container">
+<div class="form_container">
 <%= simple_form_for @contact do |f| %>
   
   
@@ -8,7 +8,7 @@
   <%= f.input :email %>  
   <%= f.input :phone_num %>  
   <%= f.input :address1 %>  
-  <%= f.input :address2 %><br/>
+  <%= f.input :address2 %>
   <%= f.association :contact_type %>  	
   <%= f.button :submit %>
   
