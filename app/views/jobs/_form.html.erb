@@ -1,21 +1,34 @@
 <%= simple_form_for(@job) do |f| %>
   <%= f.error_notification %>
 
-  <div class="inputs">
-    <%= f.input :last_name %>
-    <%= f.input :first_name %>
-    <%= f.input :city %>
-    <%= f.input :job_type %>
-    <%= f.input :insurance_company %>
-    <%= f.input :age %>
-    <%= f.input :loss_date %>
-    <%= f.input :job_num %>
-    <%= f.input :job_status %>
-    <%= f.input :dispatch_status %>
-    <%= f.input :caller %>
-    <%= f.input :occupant %>
-    <%= f.input :production_manager %>
-    <%= f.input :crew_chief %>
+  <div id="tab-container" class="inputs">
+    
+	<ul>
+		<li><a href="#tab-1">Customer Information</a></li>
+		<li><a href="#tab-2">Job Details</a></li>
+		<li><a href="#tab-3">Crew Information</a></li>
+	</ul>
+    
+    <div id="tab-1">	    
+	    <%= f.input :caller %>
+	    <%= f.input :last_name %>
+	    <%= f.input :first_name %>
+	    <%= f.input :city %>
+	    <%= f.input :occupant %>	    
+  	</div>    
+    <div id="tab-2">    	
+    	<%= f.input :job_status %>
+    	<%= f.input :job_num %>
+    	<%= f.input :loss_date %>
+    	<%= f.input :job_type %>
+    	<%= f.input :dispatch_status %>
+	    <%= f.input :insurance_company %>
+	    <%= f.input :age %>
+    </div>    
+    <div id="tab-3">    	
+    	<%= f.input :production_manager %>
+    	<%= f.input :crew_chief %>
+    </div>       
   </div>
 
   <div class="actions">

@@ -494,6 +494,50 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 
 
 
+/*************  TAB STYLES **********/
+
+
+#tab-container{
+	background: white;
+}
+
+#tab-container ul { 
+	margin: 0; 
+	padding: 0; 
+}
+
+#tab-container ul li { 
+	display: inline-block; 
+	background: #ccc; 
+	border: solid #666 1px; 
+	border-bottom: none;
+
+}
+#tab-container ul li a { 
+	display: block; 
+	padding: 5px; 
+	outline: none; 
+}
+
+#tab-container ul li a:hover { 
+	text-decoration: underline; 
+}
+
+#tab-container ul li.active { 
+	background: #fff; 
+	padding-top: 6px; 
+	position: relative; 
+	top: 1px; 
+}
+
+#tab-container ul li a.active { 
+	font-weight: bold; 
+}
+
+#tab-container .panel-container { 
+	border: solid 1px; 
+	padding: 0 10px; 
+}
 
 
 
@@ -501,10 +545,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 
 
 
-
-
-
-
+.error, .alert, .notice, .success, .info {
+    text-align: center;
+}
 
 
 

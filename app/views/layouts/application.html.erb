@@ -2,16 +2,20 @@
 <html>
 <head>
   <title>JqueryAirPractice</title>
-  <%= stylesheet_link_tag :all %> 
+  <%= stylesheet_link_tag 'custom' %> 
   <%= stylesheet_link_tag 'blueprint/screen' %>
   <%= stylesheet_link_tag 'blueprint/print' %>
   <%= stylesheet_link_tag 'ui-lightness/jquery-ui.custom.css' %>  
   
   <!--[if IE 6]><%= stylesheet_link_tag 'formtastic_ie6' %><![endif]-->
   <!--[if IE 7]><%= stylesheet_link_tag 'formtastic_ie7' %><![endif]-->
-  <%= javascript_include_tag :defaults %>
-  <%= javascript_include_tag 'jquery-ui-1.8.16.custom.js' %>
   
+  <%= javascript_include_tag 'jquery-1.6.4.js' %>
+  <%= javascript_include_tag 'rails.js' %>
+  <%= javascript_include_tag 'jquery-ui-1.8.16.custom.js' %>
+  <%= javascript_include_tag 'jquery.ba-hashchange.js' %>
+  <%= javascript_include_tag 'jquery.easytabs.js' %>
+  <%= javascript_include_tag 'application.js' %>
   
   <%= csrf_meta_tag %>
 </head>
@@ -40,10 +44,13 @@
 		</div>
 		
 		
-		<div class="content">				
-			<%= yield %>
+		<div class="content">
 			
-			
+			<% flash.each do |key, value| %>
+          		<div class="flash <%= key %>"><%= value %></div>
+        	<% end %>
+        				
+			<%= yield %>		
 				
 		</div>
 	</div>
