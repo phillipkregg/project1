@@ -1,0 +1,28 @@
+<%= simple_form_for(@room) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :room_name %>
+    <%= f.input :room_level %>
+    <%= f.input :level_type %>
+    <%= f.input :water_class %>
+    <%= f.input :water_category %>
+    <%= f.input :flooring_affected %>
+    <%= f.input :flooring_type %>
+    <%= f.input :carpet_type %>
+    <%= f.input :pad_type %>
+    <%= f.input :is_pad_restorable %>
+    <%= f.input :preexisting_conditions %>
+    <%= f.input :structure_scope_complete %>
+    <%= f.input :has_damaged_contents %>
+    <%= f.input :content_scope_completed %>
+    <%= f.input :length %>
+    <%= f.input :width %>
+    <%= f.input :height %>
+    <%= f.input :room_shape %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

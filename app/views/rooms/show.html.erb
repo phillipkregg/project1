@@ -1,0 +1,95 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Room name:</b>
+  <%= @room.room_name %>
+</p>
+
+<p>
+  <b>Room level:</b>
+  <%= @room.room_level %>
+</p>
+
+<p>
+  <b>Level type:</b>
+  <%= @room.level_type %>
+</p>
+
+<p>
+  <b>Water class:</b>
+  <%= @room.water_class %>
+</p>
+
+<p>
+  <b>Water category:</b>
+  <%= @room.water_category %>
+</p>
+
+<p>
+  <b>Flooring affected:</b>
+  <%= @room.flooring_affected %>
+</p>
+
+<p>
+  <b>Flooring type:</b>
+  <%= @room.flooring_type %>
+</p>
+
+<p>
+  <b>Carpet type:</b>
+  <%= @room.carpet_type %>
+</p>
+
+<p>
+  <b>Pad type:</b>
+  <%= @room.pad_type %>
+</p>
+
+<p>
+  <b>Is pad restorable:</b>
+  <%= @room.is_pad_restorable %>
+</p>
+
+<p>
+  <b>Preexisting conditions:</b>
+  <%= @room.preexisting_conditions %>
+</p>
+
+<p>
+  <b>Structure scope complete:</b>
+  <%= @room.structure_scope_complete %>
+</p>
+
+<p>
+  <b>Has damaged contents:</b>
+  <%= @room.has_damaged_contents %>
+</p>
+
+<p>
+  <b>Content scope completed:</b>
+  <%= @room.content_scope_completed %>
+</p>
+
+<p>
+  <b>Length:</b>
+  <%= @room.length %>
+</p>
+
+<p>
+  <b>Width:</b>
+  <%= @room.width %>
+</p>
+
+<p>
+  <b>Height:</b>
+  <%= @room.height %>
+</p>
+
+<p>
+  <b>Room shape:</b>
+  <%= @room.room_shape %>
+</p>
+
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>

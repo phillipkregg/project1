@@ -1,0 +1,41 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  room_name: MyString
+  room_level: 1
+  level_type: MyString
+  water_class: MyString
+  water_category: MyString
+  flooring_affected: 1
+  flooring_type: MyString
+  carpet_type: MyString
+  pad_type: MyString
+  is_pad_restorable: MyString
+  preexisting_conditions: MyText
+  structure_scope_complete: false
+  has_damaged_contents: false
+  content_scope_completed: false
+  length: 1
+  width: 1
+  height: 1
+  room_shape: MyString
+
+two:
+  room_name: MyString
+  room_level: 1
+  level_type: MyString
+  water_class: MyString
+  water_category: MyString
+  flooring_affected: 1
+  flooring_type: MyString
+  carpet_type: MyString
+  pad_type: MyString
+  is_pad_restorable: MyString
+  preexisting_conditions: MyText
+  structure_scope_complete: false
+  has_damaged_contents: false
+  content_scope_completed: false
+  length: 1
+  width: 1
+  height: 1
+  room_shape: MyString

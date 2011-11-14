@@ -1,0 +1,57 @@
+<h1>Listing rooms</h1>
+
+<table>
+  <tr>
+    <th>Room name</th>
+    <th>Room level</th>
+    <th>Level type</th>
+    <th>Water class</th>
+    <th>Water category</th>
+    <th>Flooring affected</th>
+    <th>Flooring type</th>
+    <th>Carpet type</th>
+    <th>Pad type</th>
+    <th>Is pad restorable</th>
+    <th>Preexisting conditions</th>
+    <th>Structure scope complete</th>
+    <th>Has damaged contents</th>
+    <th>Content scope completed</th>
+    <th>Length</th>
+    <th>Width</th>
+    <th>Height</th>
+    <th>Room shape</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rooms.each do |room| %>
+  <tr>
+    <td><%= room.room_name %></td>
+    <td><%= room.room_level %></td>
+    <td><%= room.level_type %></td>
+    <td><%= room.water_class %></td>
+    <td><%= room.water_category %></td>
+    <td><%= room.flooring_affected %></td>
+    <td><%= room.flooring_type %></td>
+    <td><%= room.carpet_type %></td>
+    <td><%= room.pad_type %></td>
+    <td><%= room.is_pad_restorable %></td>
+    <td><%= room.preexisting_conditions %></td>
+    <td><%= room.structure_scope_complete %></td>
+    <td><%= room.has_damaged_contents %></td>
+    <td><%= room.content_scope_completed %></td>
+    <td><%= room.length %></td>
+    <td><%= room.width %></td>
+    <td><%= room.height %></td>
+    <td><%= room.room_shape %></td>
+    <td><%= link_to 'Show', room %></td>
+    <td><%= link_to 'Edit', edit_room_path(room) %></td>
+    <td><%= link_to 'Destroy', room, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Room', new_room_path %>

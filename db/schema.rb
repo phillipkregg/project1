@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111109013448) do
+ActiveRecord::Schema.define(:version => 20111114190239) do
 
   create_table "contact_types", :force => true do |t|
     t.string   "contact_type"
@@ -67,5 +67,37 @@ ActiveRecord::Schema.define(:version => 20111109013448) do
   end
 
   add_index "roles", ["contact_id"], :name => "index_roles_on_contact_id"
+
+  create_table "rooms", :force => true do |t|
+    t.string   "room_name"
+    t.integer  "room_level"
+    t.string   "level_type"
+    t.string   "water_class"
+    t.string   "water_category"
+    t.integer  "flooring_affected"
+    t.string   "flooring_type"
+    t.string   "carpet_type"
+    t.string   "pad_type"
+    t.string   "is_pad_restorable"
+    t.text     "preexisting_conditions"
+    t.boolean  "structure_scope_complete"
+    t.boolean  "has_damaged_contents"
+    t.boolean  "content_scope_completed"
+    t.integer  "length"
+    t.integer  "width"
+    t.integer  "height"
+    t.string   "room_shape"
+    t.integer  "zone_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "rooms", ["zone_id"], :name => "index_rooms_on_zone_id"
+
+  create_table "zones", :force => true do |t|
+    t.string   "zone_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
