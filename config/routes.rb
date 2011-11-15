@@ -1,9 +1,14 @@
 JqueryAirPractice::Application.routes.draw do
   
-  resources :rooms
+  
 
-  resources :zones
+  resources :zones do
+    resources :rooms 
+    
+    get 'room', :on => :member
 
+  end
+  
   root :to => 'contacts#index'
     
   resources :jobs

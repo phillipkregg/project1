@@ -19,15 +19,15 @@ class CreateRooms < ActiveRecord::Migration
       t.integer :width
       t.integer :height
       t.string :room_shape
-      t.integer :zone_id
+     
 
       t.timestamps
     end
-    add_index :rooms, :zone_id
+    
   end
 
   def self.down
     drop_table :rooms
-    remove_index :rooms, :zone_id
+    
   end
 end

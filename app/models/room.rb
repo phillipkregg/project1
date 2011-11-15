@@ -1,3 +1,4 @@
 class Room < ActiveRecord::Base
-  belongs_to :zone, :dependent => :destroy
+  belongs_to :zone
+
 end

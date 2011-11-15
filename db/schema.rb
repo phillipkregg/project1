@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111114190239) do
+ActiveRecord::Schema.define(:version => 20111114213759) do
 
   create_table "contact_types", :force => true do |t|
     t.string   "contact_type"
@@ -87,9 +87,9 @@ ActiveRecord::Schema.define(:version => 20111114190239) do
     t.integer  "width"
     t.integer  "height"
     t.string   "room_shape"
-    t.integer  "zone_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "zone_id"
   end
 
   add_index "rooms", ["zone_id"], :name => "index_rooms_on_zone_id"

@@ -1,7 +1,8 @@
-<%= simple_form_for(@room) do |f| %>
+<%= simple_form_for [@zone, @room] do |f| %>
   <%= f.error_notification %>
 
   <div class="inputs">
+  	<%= f.association :zone %>
     <%= f.input :room_name %>
     <%= f.input :room_level %>
     <%= f.input :level_type %>
