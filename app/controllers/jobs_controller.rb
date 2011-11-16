@@ -35,6 +35,11 @@ class JobsController < ApplicationController
   # GET /jobs/1/edit
   def edit
     @job = Job.find(params[:id])
+    
+    @zones = Zone.all
+    
+    
+    
   end
 
   # POST /jobs

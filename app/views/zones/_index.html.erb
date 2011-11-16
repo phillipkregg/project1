@@ -1,0 +1,24 @@
+<h3>Zones</h3>
+
+<table>
+  <tr>
+    <th>Zone name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @zones.each do |zone| %>
+  <tr>
+    <td><%= zone.zone_name %></td>
+    <td><%= link_to 'View Rooms', zone_rooms_path(zone, @room) %></td>
+    <td><%= link_to 'Show', zone %></td>
+	<td><%= link_to 'Edit', edit_zone_path(zone) %></td>
+    <td><%= link_to 'Destroy', zone, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Zone', new_zone_path %>

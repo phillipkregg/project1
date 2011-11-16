@@ -60,9 +60,21 @@
  
  
  	
+	$('#zones_div').hide();
+	
+	
+// 	Clicking Zones button hides FNOL
+	$('#zone_button a').click(function() {
+		$('#zones_div').show('fast');
+		$('#fnol_div').hide('fast');
+	})
+ 
 
- 
- 
+// 	Clicking Zones button hides FNOL
+	$('#fnol_button a').click(function() {
+		$('#zones_div').hide('fast');
+		$('#fnol_div').show('fast');
+	})
  
  
  
