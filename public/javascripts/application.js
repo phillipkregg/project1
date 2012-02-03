@@ -31,12 +31,12 @@
 
 	  // This bit can be confusing. Since Rails.js sends an accept header asking for
 	  // javascript, but we want it to return HTML, we need to override this instead.
-	  $('a[data-remote]').live('ajax:beforeSend', function(e, xhr, settings){
+	  $('a[data-remote]').bind('ajax:beforeSend', function(e, xhr, settings){
 	    xhr.setRequestHeader('accept', '*/*;q=0.5, text/html, ' + settings.accepts.html);
 	  });
 
 	  // Handle modal links with the data-remote attribute
-	  $('a[data-remote]').live('ajax:success', function(xhr, data, status){
+	  $('a[data-remote]').bind('ajax:success', function(xhr, data, status){
 	    $modal
 	      .html(data)
 	      .prepend($modal_close)
@@ -51,7 +51,7 @@
 	  $('.close', '#modal').live('click', function(){
 	    $modal_container.hide();
 	    $modal.hide();
-	    return false;
+	    
 	  });	 
 
 
@@ -61,6 +61,8 @@
  
  	
 	$('#zones_div').hide();
+	
+	$('#show_sketch_div').hide();
 	
 	
 // 	Clicking Zones button hides FNOL
@@ -76,6 +78,87 @@
 		$('#fnol_div').show('fast');
 	})
  
+ // 	Clicking Drawing button hides ALL except Drawing
+	$('#drawing_button a').click(function() {
+		$('#zones_div').hide('fast');
+		$('#fnol_div').hide('fast');
+		$('#sketches_div').show('fast');
+	})
+ 
+ 
+ // 	Show individual sketch	
+	$(function(){
+	  var $sketch_div = $('#show_sketch_div');  
+	  
+	  // This bit can be confusing. Since Rails.js sends an accept header asking for
+	  // javascript, but we want it to return HTML, we need to override this instead.
+	  $('a[data-remote]').bind('ajax:beforeSend', function(e, xhr, settings){
+	    xhr.setRequestHeader('accept', '*/*;q=0.5, text/html, ' + settings.accepts.html);
+	  });
+
+	  // Handle modal links with the data-remote attribute
+	  $('a[data-remote]').bind('ajax:success', function(xhr, data, status){
+	    $sketch_div
+	      .html(data)	      
+	      .show();
+	      
+	      // This draws 2 rectangles onto the Canvas that is returned via AJAX
+	      $(function() {		
+		      var canvas = document.getElementById("canvas");		      	
+		      
+		      if (canvas.getContext) {		
+		        var ctx = canvas.getContext("2d");		
+		
+		        ctx.fillStyle = "rgb(200,0,0)";		
+		        ctx.fillRect (10, 10, 55, 50);		
+		        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";		
+		        ctx.fillRect (30, 30, 55, 50);		
+		      }
+		 });
+	      
+	      
+	  });	 
+	});
+ 
+ 
+ // Create Drawing Canvas
+ 
+ 	$(function(){  		
+ 		//var id = $(this.getAttribute("data-sketch-id=1"));		
+		$('a.show_sketch_button').click(function() {			
+			//var my_class = $(this).attr(".data-sketch-id");
+			//alert(this.getAttribute('data-sketch-id'));
+			
+			
+		
+			
+			
+			
+		}); 
+ 	});
+ 	
+ 
+ 	
+ 	
+ 	
+ 	
+ 	
+ 
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
  
  
  

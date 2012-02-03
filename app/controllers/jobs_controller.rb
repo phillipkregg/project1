@@ -36,9 +36,9 @@ class JobsController < ApplicationController
   def edit
     @job = Job.find(params[:id])
     
-    @zones = Zone.all
-    
-    
+    @zones = Zone.all    
+    @sketches = Sketch.all    
+    @sketch = Sketch.find(params[:id])
     
   end
 

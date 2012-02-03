@@ -1,0 +1,26 @@
+ 
+
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Sketch Name:</b>
+  <%= @sketch.sketch_name %>
+</p>
+
+<div id="sketch_canvas_div">
+	<canvas id="canvas" width="150" height="150">
+
+     <p>This example requires a browser that supports the
+
+     <a href="http://www.w3.org/html/wg/html5/">HTML5</a> 
+
+     &lt;canvas&gt; feature.</p>
+
+   </canvas>
+
+</div>
+
+<%= link_to 'Edit', edit_sketch_path(@sketch) %> |
+<%= link_to 'Back', sketches_path %>

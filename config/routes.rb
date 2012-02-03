@@ -2,6 +2,8 @@ JqueryAirPractice::Application.routes.draw do
   
   
 
+  resources :sketches
+
   resources :zones do
     resources :rooms 
     

@@ -1,0 +1,23 @@
+<h3>Sketches</h3>
+
+<table>
+  <tr>
+  	<th>Sketch Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sketches.each do |sketch| %>
+  <tr>
+  	<td><%= sketch.sketch_name %></td>
+    <td><%= link_to 'Show', sketch, :remote => true, :class => 'show_sketch_button', "data-sketch-id" => sketch.id %></td>
+    <td><%= link_to 'Edit', edit_sketch_path(sketch) %></td>
+    <td><%= link_to 'Destroy', sketch, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sketch', new_sketch_path %>
